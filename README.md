@@ -1,24 +1,22 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  ## usersテーブル
 
-Things you may want to cover:
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| email              | string | null: false |
+| password           | string | null: false |
+| name               | string | null: false |
 
-* Ruby version
 
-* System dependencies
+  ### Association
 
-* Configuration
+- has_many :comics
 
-* Database creation
+  ## comicsテーブル
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Column             | Type       | Options     |
+| ------------------ | ------     | ----------- |
+| title              | string     | null: faise |
+| catch_copy         | text       | null: faise |
+| user               | references |             |
